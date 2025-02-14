@@ -33,8 +33,7 @@ git clone https://github.com/akashbettad1/holidayservice.git
 mvn clean package
 3.	Run the application:
 java -jar target/holiday-service-0.0.1-SNAPSHOT.jar
-4.	Access the application:
-o	The application will be available at http://localhost:8080.
+4.	Access the application: The application will be available at http://localhost:8080.
  
 **Running with Docker**
 1.	Build the Docker image:
@@ -45,12 +44,11 @@ docker run -p 8080:8080 holiday-service
 o	The application will be available at http://localhost:8080.
  
 **API Documentation**
-1. Get the Last 3 Holidays for a Country
-•	Endpoint: GET /holidays/{countryCode}
-•	Description: Retrieves the last 3 holidays for the given country.
-•	Example Request:
-GET api/holidays/NL
-•	Example Response:
+1. **Get the Last 3 Holidays for a Country**
+   1. Endpoint: GET /holidays/{countryCode}
+   2. Description: Retrieves the last 3 holidays for the given country.
+   3. Example Request: GET **api/holidays/NL**
+   4. Example Response:
 [[
     {
         "date": "2025-01-01",
@@ -65,12 +63,11 @@ GET api/holidays/NL
         "localName": "Eerste Kerstdag"
     }
 ] 
-2. Get the Number of Public Holidays Not Falling on Weekends
-•	Endpoint: GET /holidays/{year}/public-holidays?countryCodes=US,IN
-•	Description: Retrieves the number of public holidays not falling on weekends for the given year and country codes (sorted in descending order).
-•	Example Request:
-GET api/holidays/2025/public-holidays?countryCodes=US,NL
-•	Example Response:
+2. **Get the Number of Public Holidays Not Falling on Weekends**
+   1. Endpoint: GET /holidays/{year}/public-holidays?countryCodes=US,IN
+   2. Description: Retrieves the number of public holidays not falling on weekends for the given year and country codes (sorted in descending order).
+   3. Example Request: GET **api/holidays/2025/public-holidays?countryCodes=US,NL**
+   4. Example Response:
 [[
     {
         "countryCode": "US",
@@ -81,13 +78,11 @@ GET api/holidays/2025/public-holidays?countryCodes=US,NL
         "count": 8
     }
 ]
-3. Get Common Holidays Between Two Countries
-•	Endpoint: GET /holidays/{year}/common-holidays?countryCode1=US&countryCode2=IN
-•	Description: Retrieves the deduplicated list of dates celebrated in both countries for the given year.
-•	Example Request:
-GET /api/holidays/2025/common-holidays?countryCode1=US&countryCode2=NL
-
-•	Example Response:
+3. **Get Common Holidays Between Two Countries**
+   1. Endpoint: GET /holidays/{year}/common-holidays?countryCode1=US&countryCode2=IN
+   2. Description: Retrieves the deduplicated list of dates celebrated in both countries for the given year.
+   3. Example Request: GET **/api/holidays/2025/common-holidays?countryCode1=US&countryCode2=NL**
+   4. Example Response:
 [[
     {
         "date": "2025-01-01",
@@ -103,34 +98,13 @@ GET /api/holidays/2025/common-holidays?countryCode1=US&countryCode2=NL
     }
 ] 
 
-**For Health check – **
-GET /actuator/health
-Json response :
+4. **For Health check**
+   1. GET **/actuator/health**
+   2. Json response :
 ˇ {
     "status": "UP",
-    "components": {
-        "diskSpace": {
-            "status": "UP",
-            "details": {
-                "total": 62671097856,
-                "free": 51579928576,
-                "threshold": 10485760,
-                "path": "/app/.",
-                "exists": true
-            }
-        },
-        "ping": {
-            "status": "UP"
-        },
-        "ssl": {
-            "status": "UP",
-            "details": {
-                "validChains": [],
-                "invalidChains": []
-            }
-        }
-    }
-}
+     ....
+  }
 
 **Testing**
 1. Unit Tests:
