@@ -133,12 +133,12 @@ Json response :
 }
 
 **Testing**
-Unit Tests
+1. Unit Tests:
 Run the unit tests using Maven:
-mvn test
-Integration Tests
+**mvn test**
+2. Integration Tests:
 Run the integration tests using Maven:
-mvn verify
+**mvn verify**
  
  
 **Contact**
