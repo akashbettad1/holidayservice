@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/795cc31a-800a-4bbe-8f60-3e91667f9508)
 **Holiday Service**
 This is a Spring Boot application that retrieves holiday information from the Nager.Date API. It provides the following features:
 1.	Retrieve the last 3 holidays for a given country.
@@ -146,4 +145,3 @@ mvn verify
 For questions or feedback, please reach out to:
 •	Akash Bettad
 •	Email: akashbettad@gmail.com
-![image](https://github.com/user-attachments/assets/3785745d-5eb6-451b-b357-66c343c581ad)
